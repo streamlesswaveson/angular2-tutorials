@@ -1,0 +1,12 @@
+{
+  "name": "WebpackDemo",
+  "author": "heya",
+  "version": "0.0.1",
+  "description": "hello world",
+  "private": true,
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  }
+}
