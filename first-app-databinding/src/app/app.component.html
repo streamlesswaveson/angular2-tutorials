@@ -2,4 +2,6 @@
   {{title}}
 </h1>
 
+<hey-lifecycle *ngIf="!delete"></hey-lifecycle>
+<button (click)="delete = true">Click to delete</button>
 <hey-databinding></hey-databinding>
