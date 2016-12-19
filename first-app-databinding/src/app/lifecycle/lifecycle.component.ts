@@ -1,4 +1,5 @@
 import { Component,
+  Input,
   OnChanges,
   DoCheck,
   AfterContentInit,
@@ -11,9 +12,10 @@ import { Component,
 @Component({
   selector: 'hey-lifecycle',
   template: `
-    <p>
-      lifecycle Works!
-    </p>
+  <ng-content></ng-content>
+  <br/><br/>
+  bindable={{bindable}}
+  <br/>
   `,
   styles: []
 })
@@ -23,23 +25,23 @@ export class LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterView
 
   constructor() { }
 
+  @Input() bindable = 1000;
+
+
   ngOnInit() {
     this.log('ngOnInit');
   }
 
   ngOnChanges(){
     this.log('ngOnChanges');
-
   }
 
   ngDoCheck() {
     this.log('ngDoCheck');
-
   }
 
   ngAfterViewInit(){
     this.log('ngAfterViewInit');
-
   }
 
   ngAfterViewChecked(){

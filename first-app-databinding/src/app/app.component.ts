@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
   delete = false;
+  test = 'Starting value';
+  boundValue = 1000;
 }
