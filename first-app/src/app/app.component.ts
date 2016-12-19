@@ -27,6 +27,7 @@ import { Component } from '@angular/core';
 // note the backticks
   template: `
     <h1>here is an inline template</h1>
+    <hey-other></hey-other>
   `,
   // styling is optional
   // styleUrls: ['./app.component.css']
