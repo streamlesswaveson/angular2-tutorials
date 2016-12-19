@@ -9,6 +9,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 // using the cli - this line was automatically added
 import { OtherComponent } from './other/other.component';
+import { AnotherComponent } from './other/another.component';
 
 // Set up the components for the ng 2 app
 @NgModule({
@@ -16,7 +17,8 @@ import { OtherComponent } from './other/other.component';
   declarations: [
     AppComponent,
     // using the cli - this line was automatically added
-    OtherComponent
+    OtherComponent,
+    AnotherComponent
   ],
   // which other modules do I use
   imports: [
