@@ -9,4 +9,8 @@ export class DatabindingComponent {
 
   stringInterpolation = 'this is string interpoloation';
   numberInterpolation = 42;
+
+  onSomething() {
+    return true;
+  }
 }
