@@ -1,5 +1,6 @@
 import { Component,
   Input,
+  ViewChild,
   OnChanges,
   DoCheck,
   AfterContentInit,
@@ -14,7 +15,8 @@ import { Component,
   template: `
   <ng-content></ng-content>
   <br/><br/>
-  bindable={{bindable}}
+  <p #boundParagraph>{{bindable}}</p>
+  <p>{{boundParagraph.textContent}}</p>
   <br/>
   `,
   styles: []
@@ -27,6 +29,9 @@ export class LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterView
 
   @Input() bindable = 1000;
 
+  // if we want access to the local 'boundParagraph' value in the template use ViewChild
+  @ViewChild('boundParagraph')
+  myBoundParagraph: HTMLElement;
 
   ngOnInit() {
     this.log('ngOnInit');
@@ -42,6 +47,7 @@ export class LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterView
 
   ngAfterViewInit(){
     this.log('ngAfterViewInit');
+    console.log(this.myBoundParagraph);
   }
 
   ngAfterViewChecked(){
