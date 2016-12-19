@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'hey-another',
   template: `
-    <p>
-      another Works!
-    </p>
+    <article>
+      <ng-content></ng-content>
+    </article>
   `,
   styles: []
 })
