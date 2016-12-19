@@ -13,4 +13,8 @@ export class DatabindingComponent {
   onSomething() {
     return true;
   }
+
+  onFooBaz(value: string){
+    alert(`foo baz sez ${value}`);
+  }
 }
