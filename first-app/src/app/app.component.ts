@@ -22,9 +22,21 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   // OR it could be '#app-root' => <div id="app-root">
   // templates are not optional
-  templateUrl: './app.component.html',
+  // templateUrl: './app.component.html',
+
+// note the backticks
+  template: `
+    <h1>here is an inline template</h1>
+  `,
   // styling is optional
-  styleUrls: ['./app.component.css']
+  // styleUrls: ['./app.component.css']
+
+ // inline styles example - also note the backticks
+  styles: [`
+    h1 {
+      color: red;
+    }
+    `]
 })
 
 // Classes is a feature added by TypeScript which makes the creation of objects easier.
