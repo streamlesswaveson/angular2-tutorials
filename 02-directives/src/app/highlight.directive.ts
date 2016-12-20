@@ -1,16 +1,18 @@
-import { Directive, ElementRef, Renderer, HostListener, HostBinding } from '@angular/core';
+import { Directive, ElementRef, OnInit, Input, Renderer, HostListener, HostBinding } from '@angular/core';
 
 @Directive({
   // with the [] - this means it is an attribute selector
   selector: '[dirHighlight]'
 })
-export class HighlightDirective {
+export class HighlightDirective implements OnInit{
+  @Input() defaultColor = 'white';
+  @Input() highlightColor = 'green';
 
   @HostListener('mouseenter') mouseover() {
-    this.backgroundColor = 'green';
+    this.backgroundColor = this.highlightColor;
   };
   @HostListener('mouseleave') mouseleave() {
-    this.backgroundColor = 'white';
+    this.backgroundColor = this.defaultColor;
   };
 
   @HostListener('click', ['$event']) onClick(event) {
@@ -20,7 +22,11 @@ export class HighlightDirective {
   @HostBinding('style.backgroundColor') get setColor() {
     return this.backgroundColor;
   }
-  private backgroundColor = 'white';
+  private backgroundColor: string;
+
+  ngOnInit() {
+    this.backgroundColor = this.defaultColor;
+  }
   // adding the 'private' automically creates the
   // attribute on the class
   constructor(private elementRef: ElementRef, private renderer:Renderer) {
