@@ -1,0 +1,29 @@
+
+<h1>String interpoloation</h1>
+
+<p>
+  {{stringInterpolation}} | {{numberInterpolation}}
+</p>
+
+
+<h1>Property Binding</h1>
+<p>Using curly brackets
+<input type="text" value="{{stringInterpolation}}"/>
+<p>Using [value]="thing" syntax</p>
+<input type="text" [value]="stringInterpolation"/>
+
+<h2>ngClass examples</h2>
+<p>ngClass example of property binding</p>
+<p [ngClass]="{ redBorder: true }">Is this styled?</p>
+<p [ngClass]="{ redBorder: onSomething() }">Is this styled?</p>
+<h2>ngStyle examples</h2>
+<p [ngStyle]="{color: 'green'}">Is this styled?</p>
+
+<h2>Custom Property BInding</h2>
+<hey-property-binding [result]="10"></hey-property-binding>
+
+<h2> Event Binding</h2>
+<hey-event-binding (clicked)="onFooBaz($event)"></hey-event-binding>
+
+<h2>Two way binding</h2>
+<hey-two-way-databinding></hey-two-way-databinding>

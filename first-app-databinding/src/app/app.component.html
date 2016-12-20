@@ -1,0 +1,13 @@
+<h1>
+  {{title}}
+</h1>
+
+<hey-lifecycle *ngIf="!delete" [bindable]="boundValue">
+  <p>{{test}}</p>
+</hey-lifecycle>
+<button (click)="delete = true">Click to delete</button>
+
+<button (click)="test = 'changed value'">Click to change</button>
+
+<button (click)="boundValue = 2000">Click to change bound value</button>
+<hey-databinding></hey-databinding>
