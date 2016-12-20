@@ -9,6 +9,7 @@ export class AppComponent {
 
   private switch:boolean = false;
   private items = [1,2,3,4,5,6];
+  private value = 100;
   onSwitch() {
     this.switch = !this.switch;
   }
