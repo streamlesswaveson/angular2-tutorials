@@ -13,6 +13,10 @@ export class HighlightDirective {
     this.backgroundColor = 'white';
   };
 
+  @HostListener('click', ['$event']) onClick(event) {
+    console.log('event?', event);
+  }
+
   @HostBinding('style.backgroundColor') get setColor() {
     return this.backgroundColor;
   }
