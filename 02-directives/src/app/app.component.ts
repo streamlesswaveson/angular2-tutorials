@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'dir works!';
+
+  private switch:boolean = false;
+
+  onSwitch() {
+    this.switch = !this.switch;
+  }
+
 }
