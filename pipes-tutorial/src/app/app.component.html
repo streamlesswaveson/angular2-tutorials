@@ -1,0 +1,29 @@
+<h1>
+  {{title}} - really?
+</h1>
+
+<p>{{pipes | uppercase}}</p>
+
+<p>{{mydate | date }}</p>
+<p>{{mydate | date:"MM/dd/yy" }}</p>
+
+<p>{{pipes | slice:3:7}}</p>
+
+<p>{{bazinga | double }}</p>
+<hr/>
+<input type="text" #input (keyup)="0">
+<p>{{input.value | double }}</p>
+<hr/>
+
+<input type="text" #newValue>
+<button (click)="myvalues.push(newValue.value)">Add new value</button>
+<ul>
+  <li *ngFor="let item of myvalues | filter:'ea'">{{item}}</li>
+</ul>
+<ul>
+  <li *ngFor="let item of myvalues ">{{item}}</li>
+</ul>
+<hr/>
+
+<h2>async</h2>
+<p>{{asyncValue | async}}</p>
