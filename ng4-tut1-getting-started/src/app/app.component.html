@@ -1,0 +1,28 @@
+<h3>
+  {{title}}
+</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn" (click)="onSave()">Add burger</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn" (click)="onGet()">Get yer burgers</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group" *ngFor="let burger of burgers">
+        <li class="list-group-item">{{burger.uuid}}  {{burger.name}}</li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr/>
+
+<div app-pickle></div>
